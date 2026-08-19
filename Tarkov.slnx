@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Application/Tarkov.Application.csproj" Id="7c7b1b72-159f-431e-b63d-93a59533e284" />
+  <Project Path="Tarkov.API/Tarkov.API.csproj" Id="a8f3797b-d3de-4494-8560-1e56a39ffcf3" />
+  <Project Path="Tarkov.Domain/Tarkov.Domain.csproj" Id="b2846533-f2e2-4cef-9109-f3a04cde448f" />
+  <Project Path="Tarkov.Infrastructure/Tarkov.Infrastructure.csproj" Id="9e1d877e-5988-4130-a8a2-caf1ab9fd883" />
+</Solution>

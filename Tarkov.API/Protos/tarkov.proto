@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "Tarkov.API.Protos";
+
+package tarkov;
+
+service TarkovService {
+  rpc GetItems(GetItemsRequest) returns (GetItemsResponse);
+}
+
+message GetItemsRequest {
+}
+
+message GetItemsResponse {
+  repeated Item items = 1;
+}
+
+message Item {
+  string id = 1;
+  string normalized_name = 2;
+  string base_image_link = 3;
+  int32 last_low_price = 4;
+  string highest_trader_name = 5;
+  int32 highest_trader_price = 6;
+  map<string, string> translations = 7;
+}
