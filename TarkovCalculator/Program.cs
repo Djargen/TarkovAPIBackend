@@ -21,7 +21,7 @@ builder.Services.AddGrpc();
 // We gebruiken hier een vast lokale poort (bijv. 5000), zodat de app altijd lokaal kan verbinden
 builder.Services.AddGrpcClient<TarkovService.TarkovServiceClient>(o =>
 {
-    o.Address = new Uri("https://localhost:7256");
+    o.Address = new Uri("http://localhost:5000");
 });
 
 // 4. Blazor componenten toevoegen
@@ -64,4 +64,4 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 // 7. Zorg dat de webserver luistert naar de poort waar de gRPC client naartoe praat
-app.Run();
+app.Run("http://localhost:5000");
