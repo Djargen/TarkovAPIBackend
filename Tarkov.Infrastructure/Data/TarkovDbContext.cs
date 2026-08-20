@@ -7,9 +7,9 @@ using Tarkov.Infrastructure.Data.Entities;
 
 namespace Tarkov.Infrastructure.Data
 {
-    internal class DbContext : Microsoft.EntityFrameworkCore.DbContext
+    public class TarkovDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        public DbContext(DbContextOptions<DbContext> options) : base(options)
+        public TarkovDbContext(DbContextOptions<TarkovDbContext> options) : base(options)
         {
         }
 
