@@ -1,5 +1,5 @@
 using Grpc.Core;
-using Tarkov.Infrastructure.Api;
+using Tarkov.Infrastructure.DTOResponses;
 using Tarkov.API.Protos;
 
 namespace Tarkov.API.Services
