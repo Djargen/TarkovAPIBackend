@@ -32,6 +32,8 @@ namespace TarkovCalculator.Components.Pages
         private string GetTraderName(string id) =>
         TraderNames.TryGetValue(id, out var name) ? name : "Unknown";
 
+        private string? errorMessage;
+
         //get data over gRPC
         protected override async Task OnInitializedAsync()
         {
@@ -51,7 +53,16 @@ namespace TarkovCalculator.Components.Pages
                     })
                     .OrderByDescending(i => i.Profit)
                     .ToList();
-
+            }
+            catch (Grpc.Core.RpcException ex)
+            {
+                errorMessage = "Kan geen verbinding maken met de Tarkov API. Start de backend service alstublieft op.";
+                items = Enumerable.Empty<ItemRecord>();
+            }
+            catch (Exception ex)
+            {
+                errorMessage = "Er is een onverwachte fout opgetreden.";
+                items = Enumerable.Empty<ItemRecord>();
             }
             finally
             {
