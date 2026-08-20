@@ -7,11 +7,11 @@ namespace Tarkov.Infrastructure.Api
 {
     public class ItemDTO
     {
-        public string id { get; set; }
-        public string normalizedName { get; set; }
-        public string baseImageLink { get; set; }
-        public int LastLowPrice { get; set; }
-        public string? HighestTraderName { get; set; }
-        public int HighestTraderPrice { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public int FleaLowPrice { get; set; }
+        public string? BestTraderName { get; set; }
+        public int BestTraderPrice { get; set; }
     }
 }

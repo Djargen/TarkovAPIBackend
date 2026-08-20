@@ -17,9 +17,9 @@ message GetItemsResponse {
 
 message Item {
   string id = 1;
-  string normalized_name = 2;
-  string base_image_link = 3;
-  int32 last_low_price = 4;
-  string highest_trader_name = 5;
-  int32 highest_trader_price = 6;
+  string name = 2;
+  string image = 3;
+  int32 flea_low_price = 4;
+  string best_trader_name = 5;
+  int32 best_trader_price = 6;
 }

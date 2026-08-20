@@ -34,24 +34,24 @@ namespace Tarkov.Infrastructure.Api
                     switch (propertyName.ToLowerInvariant())
                     {
                         case "id":
-                            item.id = reader.GetString();
+                            item.Id = reader.GetString();
                             break;
 
                         case "normalizedname":
                         case "normalizedName":
-                            item.normalizedName = reader.GetString();
+                            item.Name = reader.GetString();
                             break;
 
                         case "baseimagelink":
                         case "baseImageLink":
-                            item.baseImageLink = reader.GetString();
+                            item.Image = reader.GetString();
                             break;
 
                         case "lastlowprice":
                         case "lastLowPrice":
                             if (reader.TokenType == JsonTokenType.Number)
                             {
-                                item.LastLowPrice = reader.GetInt32();
+                                item.FleaLowPrice = reader.GetInt32();
                             }
                             break;
 
@@ -66,8 +66,8 @@ namespace Tarkov.Infrastructure.Api
                                     if (traderPrices.Count > 0)
                                     {
                                         var highestTrader = traderPrices.OrderByDescending(t => t.priceRUB).First();
-                                        item.HighestTraderName = highestTrader.trader;
-                                        item.HighestTraderPrice = highestTrader.priceRUB;
+                                        item.BestTraderName = highestTrader.trader;
+                                        item.BestTraderPrice = highestTrader.priceRUB;
                                     }
                                 }
                             }

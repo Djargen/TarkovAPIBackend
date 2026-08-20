@@ -28,12 +28,12 @@ namespace Tarkov.API.Services
             {
                 var protoItem = new Item
                 {
-                    Id = item.id,
-                    NormalizedName = item.normalizedName ?? "",
-                    BaseImageLink = item.baseImageLink,
-                    LastLowPrice = item.LastLowPrice,
-                    HighestTraderName = item.HighestTraderName ?? "",
-                    HighestTraderPrice = item.HighestTraderPrice
+                    Id = item.Id,
+                    Name = item.Name ?? "",
+                    Image = item.Image,
+                    FleaLowPrice = item.FleaLowPrice,
+                    BestTraderName = item.BestTraderName ?? "",
+                    BestTraderPrice = item.BestTraderPrice
                 };
 
                 response.Items.Add(protoItem);

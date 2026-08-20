@@ -1,0 +1,8 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Suppress CS0200 for generated OpenAPI files
+[*.generated.cs]
+dotnet_diagnostic.CS0200.severity = none
