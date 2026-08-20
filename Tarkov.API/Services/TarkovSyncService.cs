@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Tarkov.API.Services
 {
-    internal class TarkovSyncService(TarkovDbContext context, TarkovAPIService apiService, ILogger<TarkovSyncService> logger)
+    public class TarkovSyncService(TarkovDbContext context, TarkovAPIService apiService, ILogger<TarkovSyncService> logger)
     {
         public async Task SyncDataAsync()
         {

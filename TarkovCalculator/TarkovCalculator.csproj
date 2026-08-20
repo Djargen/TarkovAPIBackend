@@ -22,6 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tarkov.API\Tarkov.API.csproj" />
+    <ProjectReference Include="..\Tarkov.Infrastructure\Tarkov.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Protobuf Include="Protos\tarkov.proto">
       <GrpcServices>Client</GrpcServices>
     </Protobuf>
