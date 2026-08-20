@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Tarkov.API/Tarkov.API.csproj" Id="a8f3797b-d3de-4494-8560-1e56a39ffcf3" />
   <Project Path="Tarkov.Infrastructure/Tarkov.Infrastructure.csproj" Id="9e1d877e-5988-4130-a8a2-caf1ab9fd883" />
+  <Project Path="TarkovCalculator/TarkovCalculator.csproj" Id="ab04efed-9657-49cb-a8b8-f53ce798323d" />
 </Solution>

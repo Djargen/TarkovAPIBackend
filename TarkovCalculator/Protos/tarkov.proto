@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "TarkovCalculator.Protos";
+
+package tarkov;
+
+service TarkovService {
+  rpc GetItems(GetItemsRequest) returns (GetItemsResponse);
+}
+
+message GetItemsRequest {
+}
+
+message GetItemsResponse {
+  repeated Item items = 1;
+}
+
+message Item {
+  string id = 1;
+  string name = 2;
+  string image = 3;
+  int32 flea_low_price = 4;
+  string best_trader_name = 5;
+  int32 best_trader_price = 6;
+}

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Bender';
+    src: url('Jovanny Lemonad - Bender-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    background-color: #0f0f0f !important;
+    background: #0f0f0f !important;
+    color: #d4d4d4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Bender', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+#app, .app, main, .main, .content, .page {
+    background-color: #0f0f0f !important;
+    color: #d4d4d4 !important;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Bender', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.page-title {
+    text-align: center !important;
+    color: #d4af37 !important;
+    font-size: 2.5rem !important;
+    margin: 20px 0 !important;
+}
