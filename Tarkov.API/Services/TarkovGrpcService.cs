@@ -36,15 +36,6 @@ namespace Tarkov.API.Services
                     HighestTraderPrice = item.HighestTraderPrice
                 };
 
-                // Add translations if they exist
-                if (item.translations != null)
-                {
-                    foreach (var translation in item.translations)
-                    {
-                        protoItem.Translations[translation.Key] = translation.Value?.ToString() ?? "";
-                    }
-                }
-
                 response.Items.Add(protoItem);
             }
 

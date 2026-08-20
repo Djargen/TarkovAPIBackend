@@ -13,6 +13,5 @@ namespace Tarkov.Infrastructure.Api
         public int LastLowPrice { get; set; }
         public string? HighestTraderName { get; set; }
         public int HighestTraderPrice { get; set; }
-        public Dictionary<string, object>? translations { get; set; }
     }
 }

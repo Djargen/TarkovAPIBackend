@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Application\Tarkov.Application.csproj" />
-    <ProjectReference Include="..\Tarkov.Domain\Tarkov.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -73,18 +73,6 @@ namespace Tarkov.Infrastructure.Api
                             }
                             break;
 
-                        case "translations":
-                            // Parse translations as a generic JsonElement to avoid type conversion errors
-                            if (reader.TokenType == JsonTokenType.StartObject)
-                            {
-                                using (var doc = JsonDocument.ParseValue(ref reader))
-                                {
-                                    // Keep the translations as a raw JsonElement
-                                    item.translations = ParseJsonElementToDictionary(doc.RootElement);
-                                }
-                            }
-                            break;
-
                         default:
                             // Skip unknown properties by consuming the entire value
                             // This handles both simple values and complex nested structures

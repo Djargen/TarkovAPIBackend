@@ -22,5 +22,4 @@ message Item {
   int32 last_low_price = 4;
   string highest_trader_name = 5;
   int32 highest_trader_price = 6;
-  map<string, string> translations = 7;
 }
