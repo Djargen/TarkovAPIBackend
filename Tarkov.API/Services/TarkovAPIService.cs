@@ -5,8 +5,9 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Tarkov.Infrastructure.DTOResponses;
 
-namespace Tarkov.Infrastructure.Api
+namespace Tarkov.API.Services
 {
     public class TarkovAPIService(HttpClient httpClient)
     {

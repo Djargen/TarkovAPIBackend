@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Tarkov.Infrastructure.Api
+namespace Tarkov.Infrastructure.DTOResponses
 {
     /// <summary>
     /// Represents the root response structure from the Tarkov API

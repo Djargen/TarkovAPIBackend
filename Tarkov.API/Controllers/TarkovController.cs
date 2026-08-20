@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Tarkov.Infrastructure.Api;
+using Tarkov.API.Services;
 
 namespace Tarkov.API.Controllers
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Tarkov.Infrastructure.Api
+namespace Tarkov.Infrastructure.DTOResponses
 {
     public class ItemDTOConverter : JsonConverter<ItemDTO>
     {
@@ -27,8 +27,13 @@ namespace Tarkov.Infrastructure.Api
 
                 if (reader.TokenType == JsonTokenType.PropertyName)
                 {
-                    string propertyName = reader.GetString();
+                    string? propertyName = reader.GetString();
                     reader.Read(); // Move to the property value
+
+                    if (propertyName == null)
+                    {
+                        continue;
+                    }
 
                     // Handle properties case-insensitively
                     switch (propertyName.ToLowerInvariant())
@@ -88,9 +93,9 @@ namespace Tarkov.Infrastructure.Api
             return item;
         }
 
-        private Dictionary<string, object> ParseJsonElementToDictionary(JsonElement element)
+        private Dictionary<string, object?> ParseJsonElementToDictionary(JsonElement element)
         {
-            var result = new Dictionary<string, object>();
+            var result = new Dictionary<string, object?>();
 
             if (element.ValueKind == JsonValueKind.Object)
             {
@@ -103,7 +108,7 @@ namespace Tarkov.Infrastructure.Api
             return result;
         }
 
-        private object ConvertJsonElement(JsonElement element)
+        private object? ConvertJsonElement(JsonElement element)
         {
             return element.ValueKind switch
             {
@@ -118,9 +123,9 @@ namespace Tarkov.Infrastructure.Api
             };
         }
 
-        private List<object> ConvertJsonArray(JsonElement element)
+        private List<object?> ConvertJsonArray(JsonElement element)
         {
-            var list = new List<object>();
+            var list = new List<object?>();
             foreach (var item in element.EnumerateArray())
             {
                 list.Add(ConvertJsonElement(item));

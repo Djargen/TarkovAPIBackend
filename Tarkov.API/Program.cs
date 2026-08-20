@@ -1,4 +1,4 @@
-using Tarkov.Infrastructure.Api;
+using Tarkov.Infrastructure.DTOResponses;
 using Tarkov.API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
